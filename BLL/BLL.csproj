@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C5F6F663-CFF3-4A35-8339-6229D983AF6B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data" />
+    <Reference Include="system.linq.dynamic">
+      <HintPath>..\system.linq.dynamic.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts\BlAddresses.cs" />
+    <Compile Include="Accounts\BlAddressTypes.cs" />
+    <Compile Include="Accounts\BlContacts.cs" />
+    <Compile Include="Accounts\BlContactTypes.cs" />
+    <Compile Include="Accounts\BlGenders.cs" />
+    <Compile Include="Accounts\BlRoles.cs" />
+    <Compile Include="Accounts\BlTowns.cs" />
+    <Compile Include="Accounts\BlUserRoles.cs" />
+    <Compile Include="Accounts\BlUsers.cs" />
+    <Compile Include="Accounts\BlUserTypes.cs" />
+    <Compile Include="Catalogue\BlPriceTypes.cs" />
+    <Compile Include="Catalogue\BlProducts.cs" />
+    <Compile Include="CustomExceptions\AccountBlockedException.cs" />
+    <Compile Include="CustomExceptions\DataListException.cs" />
+    <Compile Include="CustomExceptions\DataDeletionException.cs" />
+    <Compile Include="CustomExceptions\DataInsertionException.cs" />
+    <Compile Include="CustomExceptions\DataUpdateException.cs" />
+    <Compile Include="CustomExceptions\DataRelationException.cs" />
+    <Compile Include="CustomExceptions\DuplicateDataException.cs" />
+    <Compile Include="CustomExceptions\ExceedsStockException.cs" />
+    <Compile Include="CustomExceptions\ItemNotFoundException.cs" />
+    <Compile Include="CustomExceptions\TransactionFailedException.cs" />
+    <Compile Include="CustomExceptions\UserAlreadyExistsException.cs" />
+    <Compile Include="Navigation\BlCategory.cs" />
+    <Compile Include="Navigation\BlMenus.cs" />
+    <Compile Include="Orders\BlOrderDetails.cs" />
+    <Compile Include="Orders\BlOrders.cs" />
+    <Compile Include="Orders\BlOrderStates.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sales\BlSpecialSales.cs" />
+    <Compile Include="ShoppingCarts\BlShoppingCarts.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{7CCE3CAD-7879-45B4-90C6-BFD08EEE8954}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{74FA5FDF-0675-49DE-B20B-90DBF5EE4D13}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

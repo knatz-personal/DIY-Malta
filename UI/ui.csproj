@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{40022D78-B7E3-46D5-867D-0CE4A12D67FE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.4.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Common\bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about.aspx" />
+    <Content Include="accounts\alt_login.aspx" />
+    <Content Include="accounts\login.aspx" />
+    <Content Include="accounts\register.aspx" />
+    <Content Include="contact.aspx" />
+    <Content Include="css\fonts.css" />
+    <Content Include="css\menu.css" />
+    <Content Include="css\reset.css" />
+    <Content Include="css\site.css" />
+    <Content Include="css\ui-theme-flick\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\ui-theme-flick\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="css\ui-theme-flick\images\ui-bg_flat_55_ffffff_40x100.png" />
+    <Content Include="css\ui-theme-flick\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\ui-theme-flick\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\ui-theme-flick\images\ui-bg_highlight-soft_100_f6f6f6_1x100.png" />
+    <Content Include="css\ui-theme-flick\images\ui-bg_highlight-soft_25_0073ea_1x100.png" />
+    <Content Include="css\ui-theme-flick\images\ui-bg_highlight-soft_50_dddddd_1x100.png" />
+    <Content Include="css\ui-theme-flick\images\ui-icons_0073ea_256x240.png" />
+    <Content Include="css\ui-theme-flick\images\ui-icons_454545_256x240.png" />
+    <Content Include="css\ui-theme-flick\images\ui-icons_666666_256x240.png" />
+    <Content Include="css\ui-theme-flick\images\ui-icons_ff0084_256x240.png" />
+    <Content Include="css\ui-theme-flick\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\ui-theme-flick\jquery-ui.css" />
+    <Content Include="css\ui-theme-flick\jquery-ui.min.css" />
+    <Content Include="css\ui-theme-flick\jquery-ui.structure.css" />
+    <Content Include="css\ui-theme-flick\jquery-ui.structure.min.css" />
+    <Content Include="css\ui-theme-flick\jquery-ui.theme.css" />
+    <Content Include="css\ui-theme-flick\jquery-ui.theme.min.css" />
+    <Content Include="default.aspx" />
+    <Content Include="detail.aspx" />
+    <Content Include="errors\401.html" />
+    <Content Include="errors\403.html" />
+    <Content Include="errors\404.html" />
+    <Content Include="errors\500.html" />
+    <Content Include="errors\503.html" />
+    <Content Include="errors\generic.html" />
+    <Content Include="errors\style.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="img\loader.gif" />
+    <Content Include="img\ajax-loader.gif" />
+    <Content Include="img\pdf.png" />
+    <Content Include="img\skeleton\arrow.png" />
+    <Content Include="img\breadcrumb_divider.png" />
+    <Content Include="img\catalogue\3cf52d8a-3b2c-401f-afdb-840faf8010d6.jpg" />
+    <Content Include="img\catalogue\product0.jpg" />
+    <Content Include="img\check.png" />
+    <Content Include="img\delete.png" />
+    <Content Include="img\discount.png" />
+    <Content Include="img\error.png" />
+    <Content Include="img\skeleton\facebook.png" />
+    <Content Include="img\icn_alert_info.png" />
+    <Content Include="img\icn_search.png" />
+    <Content Include="img\icn_user.png" />
+    <Content Include="img\image.png" />
+    <Content Include="img\key.png" />
+    <Content Include="img\list_metro.png" />
+    <Content Include="img\module_footer_bg.png" />
+    <Content Include="img\money.png" />
+    <Content Include="img\next.png" />
+    <Content Include="img\phone_metro.png" />
+    <Content Include="img\previous.png" />
+    <Content Include="img\print.png" />
+    <Content Include="img\secondary_bar.png" />
+    <Content Include="img\skeleton\bov.gif" />
+    <Content Include="img\skeleton\favicon.ico" />
+    <Content Include="img\promotions\featured1.png" />
+    <Content Include="img\promotions\featured2.png" />
+    <Content Include="img\promotions\featured3.png" />
+    <Content Include="img\skeleton\favicon.png" />
+    <Content Include="img\skeleton\hsbc.gif" />
+    <Content Include="img\skeleton\logo.png" />
+    <Content Include="img\skeleton\mastercard.gif" />
+    <Content Include="img\skeleton\sale.png" />
+    <Content Include="img\skeleton\square.png" />
+    <Content Include="img\skeleton\visa.gif" />
+    <Content Include="img\skeleton\yes.png" />
+    <Content Include="img\snext.png" />
+    <Content Include="img\sprevious.png" />
+    <Content Include="img\table_sorter_header.png" />
+    <Content Include="img\skeleton\twitter.png" />
+    <Content Include="js\jpaginator\about.png" />
+    <Content Include="js\jpaginator\bg.png" />
+    <Content Include="js\jpaginator\codrops_back.png" />
+    <Content Include="js\jpaginator\css\style.css" />
+    <Content Include="js\jpaginator\images\next.png" />
+    <Content Include="js\jpaginator\images\previous.png" />
+    <Content Include="js\jpaginator\images\snext.png" />
+    <Content Include="js\jpaginator\images\sprevious.png" />
+    <Content Include="js\jpaginator\jPaginate.html" />
+    <Content Include="js\jpaginator\jquery-1.3.2.js" />
+    <Content Include="js\jpaginator\jquery.paginate.js" />
+    <Content Include="js\hoverintent.js" />
+    <Content Include="js\jquery-cookie\Gruntfile.js" />
+    <Content Include="js\jquery-cookie\jquery.cookie.js" />
+    <Content Include="js\jquery-cookie\MIT-LICENSE.txt" />
+    <Content Include="js\jquery-cookie\test\index.html" />
+    <Content Include="js\jquery-cookie\test\malformed_cookie.html" />
+    <Content Include="js\jquery-cookie\test\server.js" />
+    <Content Include="js\jquery-cookie\test\tests.js" />
+    <Content Include="js\additional-methods.min.js" />
+    <Content Include="js\jquery-1.11.0.min.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jtable\themes\lightcolor\add.png" />
+    <Content Include="js\jtable\themes\lightcolor\bg-thead.png" />
+    <Content Include="js\jtable\themes\lightcolor\blue\jtable.css" />
+    <Content Include="js\jtable\themes\lightcolor\blue\jtable.min.css" />
+    <Content Include="js\jtable\themes\lightcolor\blue\loading.gif" />
+    <Content Include="js\jtable\themes\lightcolor\close.png" />
+    <Content Include="js\jtable\themes\lightcolor\column-asc.png" />
+    <Content Include="js\jtable\themes\lightcolor\column-desc.png" />
+    <Content Include="js\jtable\themes\lightcolor\column-sortable.png" />
+    <Content Include="js\jtable\themes\lightcolor\delete.png" />
+    <Content Include="js\jtable\themes\lightcolor\edit.png" />
+    <Content Include="js\jtable\themes\lightcolor\gray\jtable.css" />
+    <Content Include="js\jtable\themes\lightcolor\gray\jtable.min.css" />
+    <Content Include="js\jtable\themes\lightcolor\gray\loading.gif" />
+    <Content Include="js\jtable\themes\lightcolor\green\jtable.css" />
+    <Content Include="js\jtable\themes\lightcolor\green\jtable.min.css" />
+    <Content Include="js\jtable\themes\lightcolor\green\loading.gif" />
+    <Content Include="js\jtable\themes\lightcolor\orange\jtable.css" />
+    <Content Include="js\jtable\themes\lightcolor\orange\jtable.min.css" />
+    <Content Include="js\jtable\themes\lightcolor\orange\loading.gif" />
+    <Content Include="js\jtable\themes\lightcolor\red\jtable.css" />
+    <Content Include="js\jtable\themes\lightcolor\red\jtable.min.css" />
+    <Content Include="js\jtable\themes\lightcolor\red\loading.gif" />
+    <Content Include="js\jtable\validation\css\validationEngine.jquery.css" />
+    <Content Include="js\jtable\validation\js\jquery.validationEngine.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-ca.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-cz.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-da.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-de.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-el.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-en.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-es.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-et.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-fa.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-fi.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-fr.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-he.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-hr.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-hu.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-id.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-it.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-ja.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-lt.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-nl.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-no.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-pl.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-pt.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-pt_BR.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-ro.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-ru.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-sr_Cyrl.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-sr_Latn.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-sv.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-tr.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-vi.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-zh_CN.js" />
+    <Content Include="js\jtable\validation\js\languages\jquery.validationEngine-zh_TW.js" />
+    <Content Include="members\administrators\index.aspx" />
+    <Content Include="members\administrators\admin.js" />
+    <Content Include="js\global.js" />
+    <Content Include="js\jquery.slidertron-1.1.js" />
+    <Content Include="js\jquery.validate.min.js" />
+    <Content Include="js\jtable\extensions\jquery.jtable.aspnetpagemethods.js" />
+    <Content Include="js\jtable\extensions\jquery.jtable.aspnetpagemethods.min.js" />
+    <Content Include="js\jtable\external\json2.js" />
+    <Content Include="js\jtable\external\json2.min.js" />
+    <Content Include="js\jtable\jquery.jtable.js" />
+    <Content Include="js\jtable\jquery.jtable.min.js" />
+    <Content Include="members\cart.aspx" />
+    <Content Include="members\checkout.aspx" />
+    <Content Include="members\index.aspx" />
+    <Content Include="members\invoice.aspx" />
+    <Content Include="css\listviewStyle.css" />
+    <Content Include="uploader.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="accounts\alt_login.aspx.cs">
+      <DependentUpon>alt_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounts\alt_login.aspx.designer.cs">
+      <DependentUpon>alt_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="accounts\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounts\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="accounts\register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="accounts\register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detail.aspx.cs">
+      <DependentUpon>detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detail.aspx.designer.cs">
+      <DependentUpon>detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="errors\401.aspx.cs">
+      <DependentUpon>401.html</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="errors\401.aspx.designer.cs">
+      <DependentUpon>401.html</DependentUpon>
+    </Compile>
+    <Compile Include="errors\403.aspx.cs">
+      <DependentUpon>403.html</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="errors\403.aspx.designer.cs">
+      <DependentUpon>403.html</DependentUpon>
+    </Compile>
+    <Compile Include="errors\404.aspx.cs">
+      <DependentUpon>404.html</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="errors\404.aspx.designer.cs">
+      <DependentUpon>404.html</DependentUpon>
+    </Compile>
+    <Compile Include="errors\503.aspx.cs">
+      <DependentUpon>503.html</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="errors\503.aspx.designer.cs">
+      <DependentUpon>503.html</DependentUpon>
+    </Compile>
+    <Compile Include="errors\generic.aspx.cs">
+      <DependentUpon>generic.html</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="errors\generic.aspx.designer.cs">
+      <DependentUpon>generic.html</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="masters\Dashboard.master.cs">
+      <DependentUpon>Dashboard.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="masters\Dashboard.master.designer.cs">
+      <DependentUpon>Dashboard.master</DependentUpon>
+    </Compile>
+    <Compile Include="masters\SiteSkeleton.Master.cs">
+      <DependentUpon>SiteSkeleton.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="masters\SiteSkeleton.Master.designer.cs">
+      <DependentUpon>SiteSkeleton.Master</DependentUpon>
+    </Compile>
+    <Compile Include="members\administrators\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="members\administrators\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="members\cart.aspx.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="members\cart.aspx.designer.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="members\checkout.aspx.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="members\checkout.aspx.designer.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="members\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="members\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="members\invoice.aspx.cs">
+      <DependentUpon>invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="members\invoice.aspx.designer.cs">
+      <DependentUpon>invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="uploader.aspx.cs">
+      <DependentUpon>uploader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uploader.aspx.designer.cs">
+      <DependentUpon>uploader.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="masters\SiteSkeleton.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{C5F6F663-CFF3-4A35-8339-6229D983AF6B}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{7CCE3CAD-7879-45B4-90C6-BFD08EEE8954}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="members\administrators\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="members\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="masters\Dashboard.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="js\jtable\themes\lightcolor\blue\jtable.less" />
+    <Content Include="js\jtable\themes\lightcolor\gray\jtable.less" />
+    <Content Include="js\jtable\themes\lightcolor\green\jtable.less" />
+    <Content Include="js\jtable\themes\lightcolor\jtable_lightcolor_base.less" />
+    <Content Include="js\jtable\themes\lightcolor\orange\jtable.less" />
+    <Content Include="js\jtable\themes\lightcolor\red\jtable.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="js\jtable\jquery.jtable.min.js.map">
+      <DependentUpon>jquery.jtable.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="js\jquery-cookie\.gitignore" />
+    <Content Include="js\jquery-cookie\.jshintrc" />
+    <Content Include="js\jquery-cookie\.tm_properties" />
+    <Content Include="js\jquery-cookie\.travis.yml" />
+    <Content Include="js\jquery-cookie\bower.json" />
+    <Content Include="js\jquery-cookie\CHANGELOG.md" />
+    <Content Include="js\jquery-cookie\component.json" />
+    <Content Include="js\jquery-cookie\CONTRIBUTING.md" />
+    <Content Include="js\jquery-cookie\cookie.jquery.json" />
+    <Content Include="js\jquery-cookie\package.json" />
+    <Content Include="js\jquery-cookie\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52444</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

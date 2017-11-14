@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="edd7f1b82f3a4bbe9fba26fc9c47977d" Name="Diagram1">
+        <EntityTypeShape EntityType="DataContext.Address" Width="1.5" PointX="0.75" PointY="25.375" />
+        <EntityTypeShape EntityType="DataContext.AddressType" Width="1.5" PointX="1.5" PointY="29.75" />
+        <EntityTypeShape EntityType="DataContext.Category" Width="1.5" PointX="1.5" PointY="12.125" />
+        <EntityTypeShape EntityType="DataContext.Contact" Width="1.5" PointX="0.75" PointY="34.375" />
+        <EntityTypeShape EntityType="DataContext.ContactType" Width="1.5" PointX="1.5" PointY="37.875" />
+        <EntityTypeShape EntityType="DataContext.Gender" Width="1.5" PointX="0.75" PointY="9.125" />
+        <EntityTypeShape EntityType="DataContext.Menu" Width="1.5" PointX="1.5" PointY="21.375" />
+        <EntityTypeShape EntityType="DataContext.OrderDetail" Width="1.5" PointX="5.25" PointY="8.5" />
+        <EntityTypeShape EntityType="DataContext.Order" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="DataContext.OrderState" Width="1.5" PointX="0.75" PointY="3.125" />
+        <EntityTypeShape EntityType="DataContext.PriceType" Width="1.5" PointX="6" PointY="5.75" />
+        <EntityTypeShape EntityType="DataContext.Product" Width="1.5" PointX="3.75" PointY="12.875" />
+        <EntityTypeShape EntityType="DataContext.Role" Width="1.5" PointX="0.75" PointY="18.875" />
+        <EntityTypeShape EntityType="DataContext.ShoppingCart" Width="1.5" PointX="5.25" PointY="2.625" />
+        <EntityTypeShape EntityType="DataContext.SpecialSale" Width="1.5" PointX="1.5" PointY="15.25" />
+        <EntityTypeShape EntityType="DataContext.Town" Width="1.5" PointX="1.5" PointY="32.125" />
+        <EntityTypeShape EntityType="DataContext.User" Width="1.5" PointX="3" PointY="4.375" />
+        <EntityTypeShape EntityType="DataContext.UserType" Width="1.5" PointX="0.75" PointY="5.875" />
+        <AssociationConnector Association="DataContext.FK_Addresses_AddressTypes" />
+        <AssociationConnector Association="DataContext.FK_Addresses_Towns" />
+        <AssociationConnector Association="DataContext.FK_Users_Addresses" />
+        <AssociationConnector Association="DataContext.FK_Categorys_Categorys" />
+        <AssociationConnector Association="DataContext.FK_Products_Categorys" />
+        <AssociationConnector Association="DataContext.FK_Contacts_ContactTypes" />
+        <AssociationConnector Association="DataContext.FK_Users_Contacts" />
+        <AssociationConnector Association="DataContext.FK_Users_Genders" />
+        <AssociationConnector Association="DataContext.FK_Menus_Menus" />
+        <AssociationConnector Association="DataContext.FK_OrderDetails_Orders" />
+        <AssociationConnector Association="DataContext.FK_OrderDetails_Products" />
+        <AssociationConnector Association="DataContext.FK_OrderDetails_Users" />
+        <AssociationConnector Association="DataContext.FK_Orders_OrderStates" />
+        <AssociationConnector Association="DataContext.FK_PriceTypes_Products" />
+        <AssociationConnector Association="DataContext.FK_PriceTypes_UserTypes" />
+        <AssociationConnector Association="DataContext.FK_Products_SpecialSales" />
+        <AssociationConnector Association="DataContext.FK_ShoppingCarts_Products" />
+        <AssociationConnector Association="DataContext.FK_ShoppingCarts_Users" />
+        <AssociationConnector Association="DataContext.FK_Users_UserTypes" />
+        <AssociationConnector Association="DataContext.MenuRoles" />
+        <AssociationConnector Association="DataContext.UserRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

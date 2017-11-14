@@ -1,0 +1,23 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masters/SiteSkeleton.Master" AutoEventWireup="true" CodeBehind="Dashboard.master.cs" Inherits="UI.masters.Dashboard" %>
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TITLE" runat="server">
+    <asp:ContentPlaceHolder runat="server" ID="TITLE2">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="HEAD" runat="server">
+    <asp:ContentPlaceHolder runat="server" ID="HEAD2">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="PROMOTIONALCONTENT" runat="server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="MAINCONTENTPLACEHOLDER" runat="server">
+    <asp:ContentPlaceHolder runat="server" ID="MAINCONTENTPLACEHOLDER2">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="ASIDECONTENT" runat="server">
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="RIGHTPANEL" runat="server">
+</asp:Content>
+
+

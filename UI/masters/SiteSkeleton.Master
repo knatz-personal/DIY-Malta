@@ -1,0 +1,281 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteSkeleton.master.cs" Inherits="UI.masters.SiteSkeleton" %>
+
+<%@ Import Namespace="Common.Views" %>
+<%@ Import Namespace="BLL.Navigation" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head runat="server">
+    <meta charset="utf-8">
+    <title>
+        <asp:ContentPlaceHolder ID="TITLE" runat="server">
+            The DIYMalta Webstore
+        </asp:ContentPlaceHolder>
+    </title>
+    <!--FAVICON-->
+    <link rel="icon" href="/img/skeleton/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/skeleton/favicon.png" type="image/x-icon">
+
+    <!-- STYLES-->
+    <link href="/css/reset.css" rel="stylesheet" />
+    <link href="/css/ui-theme-flick/jquery-ui.min.css" rel="stylesheet" />
+    <link href="/css/fonts.css" rel="stylesheet" />
+    <link href="/css/site.css" rel="stylesheet" />
+    <link href="/css/menu.css" rel="stylesheet" />
+    <!--    JQUERY LIBRARIES-->
+    <script src="/js/jquery-1.11.0.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/jquery.slidertron-1.1.js"> </script>
+    <!--
+            [if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]
+            -->
+    <!--META TAGS-->
+    <meta name="description" content="The DIY-Malta Store">
+    <meta name="author" content="NATHAN ZWELIBANZI KHUPE">
+    <!--CUSTOM PAGE CONTENT-->
+    <asp:ContentPlaceHolder ID="HEAD" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <!--   FORM  -->
+    <form method="POST" runat="server" enctype="multipart/form-data" id="aspForm">
+        <!--[if lt IE 7]>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+        <!--  CONTENT WRAPPER  -->
+        <div class="content-wrapper">
+            <!--  PAGE HEADER  -->
+            <header id="page-header">
+                <!--LOGO-->
+                <div id="logo">
+                    <a href="/default.aspx" class="image featured disabled-tooltip">
+                        <img src="/img/skeleton/logo.png" alt="DIY-Malta" title="DIY-Malta">
+                    </a>
+                </div>
+                <!--TOOLS-->
+                <nav id="misc-tools">
+                    <ul>
+                        <li>
+                            <a href="/members/cart.aspx" id="cart-count-display">Cart [<span id="cart-counter"> 0 </span>]</a>
+                        </li>
+                        <li>
+
+                            <a href="/members/cart.aspx" id="cart-total-display">Total [€ <span id="cart-total">0.00</span>]</a>
+                        </li>
+                        <% if (HttpContext.Current.User.IsInRole("Administrator") || HttpContext.Current.User.IsInRole("Customer"))
+                           { %>
+                        <li>
+                            <asp:LinkButton ID="LogOutbttn" runat="server" OnClick="LogOutbttn_Click">Log out</asp:LinkButton>
+                        </li>
+                        <% } %>
+                        <%
+                           else
+                           { %>
+                        <li>
+                            <a href="../accounts/register.aspx" id="register-bttn" title="create an account">Register</a>
+                        </li>
+                        <li>
+                            <a href="../accounts/login.aspx" id="login-bttn" title="login">Login</a>
+                        </li>
+
+                        <% } %>
+                    </ul>
+                </nav>
+                <!--MENU-->
+                <nav id="menu">
+                    <asp:Menu ID="mainMenu" runat="server" Orientation="Horizontal" RenderingMode="List" StaticSubMenuIndent="16px" ClientIDMode="Static" IncludeStyleBlock="False">
+                    </asp:Menu>
+                </nav>
+            </header>
+
+            <!--PROMOTIONAL CONTENT-->
+            <asp:ContentPlaceHolder runat="server" ID="PROMOTIONALCONTENT">
+                <div id="featured-content">
+                    <div id="slider">
+                        <div class="viewer">
+                            <div class="reel">
+                                <div class="slide">
+                                    <h2>This is the first slide.</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet nullam.
+                                    </p>
+                                    <a class="link" href="#">Find out more ...</a>
+                                    <img src="/img/promotions/featured1.png" />
+                                </div>
+                                <div class="slide">
+                                    <h2>This is the second slide.</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet nullam.
+                                    </p>
+                                    <a class="link" href="#">Find out more ...</a>
+                                    <img src="/img/promotions/featured2.png" />
+                                </div>
+                                <div class="slide">
+                                    <h2>This is the third slide.</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet nullam.
+                                    </p>
+                                    <a class="link" href="#">Find out more ...</a>
+                                    <img src="/img/promotions/featured3.png" />
+                                </div>
+                                <div class="slide">
+                                    <h2>This is the fourth slide.</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet nullam.
+                                    </p>
+                                    <a class="link" href="#">Find out more ...</a>
+                                    <img src="/img/promotions/featured1.png" />
+                                </div>
+                                <div class="slide">
+                                    <h2>This is the fifth slide.</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet nullam.
+                                    </p>
+                                    <a class="link" href="#">Find out more ...</a>
+                                    <img src="/img/promotions/featured2.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="indicator">
+                            <ul>
+                                <li class="active">1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                        function Slider() {
+                            $('#slider').slidertron({
+                                viewerSelector: '.viewer',
+                                reelSelector: '.viewer .reel',
+                                slidesSelector: '.viewer .reel .slide',
+                                advanceDelay: 3000,
+                                speed: 'slow',
+                                navPreviousSelector: '.previous-button',
+                                navNextSelector: '.next-button',
+                                indicatorSelector: '.indicator ul li',
+                                slideLinkSelector: '.link'
+                            });
+                        }
+
+                        $.ready(Slider());
+                </script>
+            </asp:ContentPlaceHolder>
+            <!--GREETING AND BREAGCRUMB-->
+            <section id="secondary_bar">
+                <header></header>
+                <div class="user">
+                    <p>
+                        <asp:Label ID="lblGreeting" runat="server" Text=""></asp:Label>
+                    </p>
+                </div>
+                <div class="breadcrumbs_container">
+                    <asp:SiteMapPath ID="SiteMapPath" runat="server" CssClass="breadcrumbs" CurrentNodeStyle-CssClass="current" PathSeparator="">
+                        <NodeTemplate>
+                            <article class="breadcrumbs">
+                                <asp:HyperLink Text='<%# Eval("Title") %>' NavigateUrl='<%# Eval("Url") %>'
+                                    ToolTip='<%# Eval("Description") %>' runat="server" />
+                            </article>
+                        </NodeTemplate>
+                        <PathSeparatorTemplate>
+                            <div class="breadcrumb_divider"></div>
+                        </PathSeparatorTemplate>
+                        <CurrentNodeTemplate>
+                            <article class="current">
+                                <asp:HyperLink Text='<%# Eval("Title") %>' NavigateUrl='<%# Eval("Url") %>'
+                                    ToolTip='<%# Eval("Description") %>' runat="server" />
+                            </article>
+                        </CurrentNodeTemplate>
+                    </asp:SiteMapPath>
+                </div>
+                <footer></footer>
+            </section>
+            <!--MAIN CONTENT-->
+            <div id="main-content">
+                <asp:ContentPlaceHolder runat="server" ID="MAINCONTENTPLACEHOLDER">
+                    <!--LEFT PANEL-->
+                    <aside id="sidebar">
+                        <asp:ContentPlaceHolder ID="ASIDECONTENT" runat="server">
+                            <p>Aside</p>
+                        </asp:ContentPlaceHolder>
+                    </aside>
+                    <!--RIGHT PANEL-->
+                    <div class="column-container">
+                        <div id="column-content">
+                            <asp:ContentPlaceHolder ID="RIGHTPANEL" runat="server">
+                                <h4 class="intromessage">Welcome to DIY-Malta your online hardware store
+                                </h4>
+                                <div class="product-box">
+                                    <a class="image featured" href="#">
+                                        <img alt="Image of product zero" src="img/catalogue/product0.jpg">
+                                    </a>
+                                    <div class="box">
+                                        <p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum wisi maecenas ligula.</p>
+                                        <input name="quatity" class="productQuantity" autocomplete="off" type="text">
+                                        <a href="#" class="button"><span class="icon icon-shopping-cart"></span>
+                                            <br />
+                                            Add To Cart</a>
+                                        <p class="intromessage">Stock [ <span>0</span> ]</p>
+                                    </div>
+                                </div>
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                </asp:ContentPlaceHolder>
+            </div>
+            <!--PAGE FOOTER-->
+            <footer id="page-footer">
+                <ul class="contact">
+                    <li><a href="https://twitter.com/" class="icon icon-twitter" title="Twitter"><span>Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="icon icon-envelope" title="Contact Us">
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.pinterest.com/" class="icon icon-pinterest" title="Pinterest">
+                            <span>Pinterest</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/" class="icon icon-google-plus" title="Google Plus">
+                            <span>Google+</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/" class="icon icon-facebook" title="Facebook">
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li><a href="https://www.facebook.com/" class="icon icon-rss" title="RSS Feed"><span>RSS</span></a>
+                    </li>
+                </ul>
+
+                <div id="copyright">
+                    <p>
+                        Copyright &copy; 2014 DIY-Malta.com. All rights reserved.
+                    </p>
+                </div>
+            </footer>
+        </div>
+        <!--PAGE END-->
+        <noscript>
+            <div>
+                <h2>This site requires JavaScript</h2>
+            </div>
+        </noscript>
+        <!--    CUSTOM SCRIPTS   -->
+        <script src="/js/global.js"> </script>
+    </form>
+</body>
+</html>

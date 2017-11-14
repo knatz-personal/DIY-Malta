@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode title="DIY-Malta" description="">
+    <siteMapNode title="Members Area" description="Pages for logged in users">
+      <siteMapNode url="/members/administrators/index.aspx" title="Administration Dashboard"
+                   description="Manage the website from here" />
+      <siteMapNode url="/members/index.aspx" title="Profile Dashboard" description="Control page for user profile" />
+      <siteMapNode url="/members/cart.aspx" title="Shopping Cart" description="Manage your shopping cart" />
+      <siteMapNode url="/members/invoice.aspx" title="Invoice" description="Receipt for your order" />
+      <siteMapNode url="/members/checkout.aspx" title="Checkout page" description="Place your order" />
+    </siteMapNode>
+
+    <siteMapNode url="/default.aspx" title="Home Page" description="Home Page" />
+    <siteMapNode url="/detail.aspx" title="Product Detail Page" description="Product Detail Page" />
+    <siteMapNode url="/contact.aspx" title="Contact us" description="Contact details" />
+    <siteMapNode url="/about.aspx" title="About us" description="Organisaton information" />
+
+    <siteMapNode title="Accounts" description="Pages for login and registration">
+      <siteMapNode url="/accounts/login.aspx" title="Login" description="Login Page" />
+      <siteMapNode url="/accounts/alt_login.aspx" title="Alternate Login" description="Login Page" />
+      <siteMapNode url="/accounts/register.aspx" title="Register" description="Registration Page" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>
